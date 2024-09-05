@@ -47,7 +47,7 @@ function App() {
             name="contrasenia"
             placeholder="Contraseña"
             onChange={handleChangeContrasenia}
-            onKeyDown={handleKeyDown}
+            onKeyUp ={handleKeyDown}
           />
           <button onClick={handleClick}>Entrar</button>
         </div>
