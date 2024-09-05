@@ -25,6 +25,11 @@ function App() {
       alert("Contraseña incorrecta");
     }
   };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  };
   return (
     <>
       <div className="divContainer">
@@ -42,6 +47,7 @@ function App() {
             name="contrasenia"
             placeholder="Contraseña"
             onChange={handleChangeContrasenia}
+            onKeyDown={handleKeyDown}
           />
           <button onClick={handleClick}>Entrar</button>
         </div>
