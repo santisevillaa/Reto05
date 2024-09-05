@@ -4,29 +4,52 @@ import "./App.css";
 function App() {
   const [usuario, setUsuario] = useState("");
   const [contrasenia, setContrasenia] = useState("holis123");
+  const [inputContrasenia, setInputContrasenia] = useState("");
   const [nombreCompleto, setNombreCompleto] = useState("");
+  const [mostrarMensaje, setMostrarMensaje] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChangeUsuario = (e) => {
     setUsuario(e.target.value);
   };
 
-  const handleClick = () => {
-    setNombreCompleto(usuario);
-    alert(`Usuario: ${usuario}\nContraseña: ${contrasenia}`);
+  const handleChangeContrasenia = (e) => {
+    setInputContrasenia(e.target.value);
   };
 
+  const handleClick = () => {
+    if (inputContrasenia === contrasenia) {
+      setNombreCompleto(usuario);
+      setMostrarMensaje(true);
+    } else {
+      setMostrarMensaje(false);
+      alert("Contraseña incorrecta");
+    }
+  };
   return (
     <>
-      <div className="frase1">
-        <h1>Bienvenido {usuario}</h1>
-      </div>
-      <div className="container">
-        <input type="text" onChange={handleChange} />
-        <input type="password" name="contrasenia" />
-        <button onClick={handleClick}>Entrar</button>
-      </div>
-      <div className="frase2">
-        <p>Bienvenido {nombreCompleto} a nuestro sitio web!</p>
+      <div className="divContainer">
+        <div className="frase1">
+          <h1>Hola: {usuario}</h1>
+        </div>
+        <div className="container">
+          <input
+            type="text"
+            placeholder="Usuario"
+            onChange={handleChangeUsuario}
+          />
+          <input
+            type="password"
+            name="contrasenia"
+            placeholder="Contraseña"
+            onChange={handleChangeContrasenia}
+          />
+          <button onClick={handleClick}>Entrar</button>
+        </div>
+        <div className="frase2">
+          {mostrarMensaje && (
+            <p>Bienvenido {nombreCompleto} a nuestro sitio web!</p>
+          )}
+        </div>
       </div>
     </>
   );

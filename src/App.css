@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -10,42 +11,49 @@ body {
   align-items: center;
   height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #ff5722;
+}
+
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: #ffffff;
+  border: 2px solid #212121;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 input {
   width: 100%;
-  max-width: 300px;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #212121;
   border-radius: 5px;
   font-size: 16px;
+  background: #bdbdbd;
+  color: #212121;
 }
 
 button {
   padding: 10px 20px;
-  border: none;
-  background-color: #007bff;
+  background-color: #212121;
   color: white;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   margin-top: 10px;
-}
-
-button:hover {
-  background-color: #0056b3;
 }
 
 .frase1,
@@ -56,10 +64,14 @@ button:hover {
 
 h1 {
   font-size: 24px;
-  color: #333;
+  color: #212121;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 p {
-  font-size: 18px;
-  color: #555;
+  font-size: 22px;
+  color: #212121;
 }
+
