@@ -4,12 +4,14 @@ import "./App.css";
 function App() {
   const [usuario, setUsuario] = useState("");
   const [contrasenia, setContrasenia] = useState("holis123");
+  const [nombreCompleto, setNombreCompleto] = useState("");
 
   const handleChange = (e) => {
     setUsuario(e.target.value);
   };
 
   const handleClick = () => {
+    setNombreCompleto(usuario);
     alert(`Usuario: ${usuario}\nContraseña: ${contrasenia}`);
   };
 
@@ -24,7 +26,7 @@ function App() {
         <button onClick={handleClick}>Entrar</button>
       </div>
       <div className="frase2">
-        <p>Bienvenido {usuario} a nuestro sitio web!</p>
+        <p>Bienvenido {nombreCompleto} a nuestro sitio web!</p>
       </div>
     </>
   );
