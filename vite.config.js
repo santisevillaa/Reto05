@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "https://santisevillaa.github.io/santix-Reto05",
+  base: "https://santisevillaa.github.io/Reto05",
 })
