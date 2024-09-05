@@ -33,9 +33,7 @@ function App() {
   return (
     <>
       <div className="divContainer">
-        <div className="frase1">
-          <h1>Hola: {usuario}</h1>
-        </div>
+        <div className="frase1">{usuario && <h1>Hola: {usuario}</h1>}</div>
         <div className="container">
           <input
             type="text"
@@ -47,7 +45,7 @@ function App() {
             name="contrasenia"
             placeholder="Contraseña"
             onChange={handleChangeContrasenia}
-            onKeyUp ={handleKeyDown}
+            onKeyUp={handleKeyDown}
           />
           <button onClick={handleClick}>Entrar</button>
         </div>
