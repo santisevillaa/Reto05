@@ -9,10 +9,12 @@ function App() {
   const [mostrarMensaje, setMostrarMensaje] = useState(false);
 
   const handleChangeUsuario = (e) => {
+    console.log("usuario =>", e.target.value);
     setUsuario(e.target.value);
   };
 
   const handleChangeContrasenia = (e) => {
+    console.log("contraseña => ", e.target.value);
     setInputContrasenia(e.target.value);
   };
 
