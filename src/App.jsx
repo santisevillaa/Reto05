@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const [usuario, setUsuario] = useState("");
-  const [contrasenia, setContrasenia] = useState("holis123");
+  const [contrasenia, setContrasenia] = useState("hola123");
   const [inputContrasenia, setInputContrasenia] = useState("");
   const [nombreCompleto, setNombreCompleto] = useState("");
   const [mostrarMensaje, setMostrarMensaje] = useState(false);
