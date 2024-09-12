@@ -49,7 +49,7 @@ input {
 button {
   padding: 10px 20px;
   background-color: #212121;
-  color: white;
+  color: #ffffff;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -75,3 +75,6 @@ p {
   color: #212121;
 }
 
+h2 {
+  color: #212121;
+}

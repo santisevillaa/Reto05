@@ -17,7 +17,11 @@ function App() {
   };
 
   const handleClick = () => {
-    if (inputContrasenia === contrasenia) {
+    if (usuario.length == "") {
+      alert("Ingrese un nombre de usuario");
+    } else if (inputContrasenia == "") {
+      alert("Ingrese una contraseña");
+    } else if (inputContrasenia === contrasenia) {
       setNombreCompleto(usuario);
       setMostrarMensaje(true);
     } else {
@@ -33,10 +37,14 @@ function App() {
   return (
     <>
       <div className="divContainer">
-        <div className="frase1">{usuario && <h1>Hola: {usuario}</h1>}</div>
+        <div className="divLogin">
+          <h2>Ingrese sesión</h2>
+        </div>
+        <div className="frase1">{usuario && <h1>Hola, {usuario}!</h1>}</div>
         <div className="container">
           <input
             type="text"
+            name="usuario"
             placeholder="Usuario"
             onChange={handleChangeUsuario}
           />
@@ -49,6 +57,7 @@ function App() {
           />
           <button onClick={handleClick}>Entrar</button>
         </div>
+        <br />
         <div className="frase2">
           {mostrarMensaje && (
             <p>Bienvenido {nombreCompleto} a nuestro sitio web!</p>
